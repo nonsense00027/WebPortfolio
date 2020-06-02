@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Responsive Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Neil Fred Cañete",
+  "license": "ISC",
+  "homepage": "https://nonsense00027.github.io/WebPortfolio",
+  "keywords": [],
+  "dependencies": {
+    "gh-pages": "^3.0.0"
+  }
+}
