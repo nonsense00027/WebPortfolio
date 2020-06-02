@@ -196,13 +196,13 @@ main {
   transition-delay: 0.1s;
 }
 .nav-item:nth-child(3) {
-  transition-delay: 0.2s;
+  transition-delay: 0.13s;
 }
 .nav-item:nth-child(4) {
-  transition-delay: 0.3s;
+  transition-delay: 0.16s;
 }
 .nav-item:nth-child(5) {
-  transition-delay: 0.4s;
+  transition-delay: 0.19s;
 }
 .nav-item.show {
   transform: translate3d(0, 0, 0);
