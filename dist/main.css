@@ -16,6 +16,8 @@ body {
   /* font-family: "Montserrat Alternates", sans-serif; */
   /* font-family: "Bebas Neue"; */
   height: 100vh;
+  /* width: 100vw; */
+  width: 100%;
   overflow: hidden;
 }
 
@@ -108,7 +110,7 @@ main {
 #skills,
 #my-works,
 #contact {
-  padding: 4rem 0;
+  padding: 4rem 2rem;
 }
 
 #home {
@@ -138,14 +140,41 @@ main {
 }
 
 #skills .category {
-  display: flex;
-  justify-content: center;
+  width: 60%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-gap: 10px; */
+  /* justify-content: space-evenly; */
   text-align: center;
 }
 
-#skills .category > div {
-  margin-right: 2rem;
+.category > div {
+  /* margin-right: 2rem; */
+  border: 1px solid #262626;
   cursor: pointer;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease-out;
+}
+.category > div:hover {
+  background: #262626;
+  color: #fff;
+}
+
+.skill-item {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-auto-rows: 30px;
+}
+
+.skill-item .prog,
+.skill-item .web,
+.skill-item .design {
+  background: #262626;
+  height: 15px;
+  width: 0;
+  transition: all 0.5s ease-out;
 }
 
 /* MENU */
@@ -166,6 +195,7 @@ main {
 
 .menu-nav {
   position: fixed;
+  right: 50px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -176,9 +206,9 @@ main {
   transition: all 0.5s ease-out; */
   /* transition-delay: 0.5s; */
 }
-.menu-nav.show {
+/* .menu-nav.show {
   transform: translate3d(0, 0, 0);
-}
+} */
 /* .menu.show {
   transform: translate3d(0, 0, 0);
 } */
