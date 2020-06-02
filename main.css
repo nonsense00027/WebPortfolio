@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap");
+:root {
+  --primary-color: rgb(14, 129, 91);
+  --secondary-font: "Montserrat Alternates", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: "Montserrat Alternates", sans-serif; */
+  /* font-family: "Bebas Neue"; */
+  height: 100vh;
+  overflow: hidden;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("./img/background3.jpg") no-repeat center/cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* HEADER */
+.menu-btn {
+  z-index: 5;
+  cursor: pointer;
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  transition: all 0.5s ease-out;
+}
+
+.menu-btn.close {
+  transform: rotate(180deg);
+}
+
+.menu-btn .btn-line {
+  background: #262626;
+  width: 28px;
+  height: 3px;
+  margin: 0 0 6px 0;
+  transition: all 0.5s ease-out;
+}
+
+/* .menu-btn.close .btn-line {
+  background: #fff;
+} */
+
+.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 3px);
+}
+.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(10px, -6px);
+}
+
+/* MAIN */
+main {
+  z-index: 1;
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+/* CONTENT */
+.content {
+  width: 80%;
+  color: #262626;
+}
+
+.content::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: -1;
+}
+
+#home,
+#about,
+#skills,
+#my-works,
+#contact {
+  padding: 4rem 0;
+}
+
+#home {
+  height: 100vh;
+  padding-top: 20vh;
+}
+#home h1 {
+  font-size: 6rem;
+  font-weight: 600;
+}
+#home h2 {
+  font-size: 2.5vw;
+  font-family: var(--secondary-font);
+  font-weight: 400;
+}
+#home .icons {
+  padding: 1rem 0;
+}
+
+#about {
+  height: 100vh;
+}
+
+/* SKILLS */
+#skills {
+  height: 100vh;
+}
+
+#skills .category {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#skills .category > div {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+/* MENU */
+/* .menu { */
+/* position: fixed; */
+/* background: rgba(0, 0, 0, 0.95); */
+/* right: 0;
+  top: 0;
+  height: 100%;
+  width: 20%; */
+/* display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center; */
+/* transform: translate3d(100%, 0, 0);
+  transition: all 0.5s ease-out; */
+/* } */
+
+.menu-nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  justify-content: center;
+  /* align-items: center; */
+  /* transform: translate3d(150%, 0, 0);
+  transition: all 0.5s ease-out; */
+  /* transition-delay: 0.5s; */
+}
+.menu-nav.show {
+  transform: translate3d(0, 0, 0);
+}
+/* .menu.show {
+  transform: translate3d(0, 0, 0);
+} */
+
+.menu-nav li {
+  margin-bottom: 1.5vw;
+}
+
+.nav-item {
+  transform: translate3d(150%, 0, 0);
+  transition: all 0.5s ease-out;
+}
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.nav-item:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.nav-item:nth-child(4) {
+  transition-delay: 0.3s;
+}
+.nav-item:nth-child(5) {
+  transition-delay: 0.4s;
+}
+.nav-item.show {
+  transform: translate3d(0, 0, 0);
+}
+
+/* UTILITY */
+.btn {
+  display: inline block;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  color: #262626;
+  border: 1px solid #262626;
+  font-family: var(--secondary-font);
+  padding: 0.5rem 2rem;
+  transition: all 0.3s ease-out;
+  /* padding: 0.5rem 2rem; */
+  /* border: 1px solid #fff; */
+  /* border: 1px solid #262626; */
+  /* background: #262626; */
+  /* background: rgba(0, 0, 0, 0.5); */
+  /* color: #fff; */
+  /* color: #262626;
+  /* font-weight: 500; */
+  /* font-family: var(--secondary-font); */
+  /* transition: all 0.3s ease-out;  */
+}
+
+.btn:hover {
+  background: #fff;
+  background: #262626;
+  color: #fff;
+}
+
+.btn-menu {
+  display: block;
+  font-size: 1.5vw;
+  padding: 0.5rem 2rem;
+  color: #262626;
+  border-radius: 0.3rem;
+  border: 1px solid #262626;
+  font-family: var(--secondary-font);
+  transition: all 0.3s ease-out;
+}
+
+.btn-menu:hover {
+  /* background: #fff; */
+  background: #262626;
+  color: #fff;
+}
+
+.active {
+  background: rgba(0, 0, 0, 0.8);
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+}
