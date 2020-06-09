@@ -1,9 +1,9 @@
 // MENU BUTTON FUNCTIONS
 function toggleMenu() {
-  whole.classList.toggle("active");
+  // whole.classList.toggle("active");
   menuButton.classList.toggle("close");
   menu.classList.toggle("show");
-  header.classList.toggle("active");
+  // header.classList.toggle("active");
 }
 
 // MENU NAV FUNCTIONS
@@ -117,9 +117,9 @@ console.log(sections);
 sections.forEach((section) => {
   observer.observe(section);
 });
-const whole = document.querySelector(".whole");
+// const whole = document.querySelector(".whole");
 const menuButton = document.querySelector(".menu-btn");
-const header = document.querySelector(".header");
+// const header = document.querySelector(".header");
 menuButton.addEventListener("click", toggleMenu);
 const menu = document.querySelector(".menu");
 const title = document.querySelector(".title");
