@@ -19,6 +19,14 @@ function toggleActive(e) {
   resetSkillItem();
 }
 
+// MIDDLE HEADER FUNCTION
+function toggleMiddle(e) {
+  middle1.classList.toggle("animate");
+  middle2.classList.toggle("animate");
+  designer.classList.toggle("animate");
+  programmer.classList.toggle("animate");
+}
+
 // SKILLS FUNCTIONS
 function toogleBadges(type) {
   badges.forEach((badge) => {
@@ -93,6 +101,15 @@ function toggleActiveCategory(e) {
   }, 3000);
 }
 
+// EXPERIENCES FUNCTION
+function toggleSlide(e) {
+  // console.log(e.target.nextElementSibling);
+  const card = e.target.nextElementSibling;
+  card.classList.toggle("slide");
+  e.target.classList.toggle("slide");
+  // e.target.nextElementSibling.classList.toggle("silde");
+}
+
 //SECTION OBSERVER FUNCTIONS
 const options = {
   // rootMargin: "-1000px 0px 0px 0px",
@@ -127,6 +144,13 @@ const about = document.querySelector(".about-me");
 const content = document.querySelector(".content");
 const subContent = document.querySelector(".sub-content");
 
+// MIDDLE HEADER
+const middle1 = document.querySelector(".middle-content");
+const middle2 = document.querySelector(".middle-image");
+const designer = document.querySelector(".designer");
+const programmer = document.querySelector(".programmer");
+middle1.addEventListener("click", toggleMiddle);
+
 // ACTIVE BUTTON
 const menuButtons = document.querySelectorAll(".btn-menu");
 menuButtons.forEach((button) => button.addEventListener("click", toggleActive));
@@ -140,6 +164,13 @@ categoryButton.forEach((button) =>
   button.addEventListener("click", toggleActiveCategory)
 );
 
+// EXPERIENCES
+const expImage = document.querySelectorAll(".card-img");
+const cardBack = document.querySelectorAll(".card-back");
+
+expImage.forEach((image) => {
+  image.addEventListener("click", toggleSlide);
+});
 // Smooth Scrolling
 $(".menu-nav a").on("click", function (e) {
   if (this.hash !== "") {
