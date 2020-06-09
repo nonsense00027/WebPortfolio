@@ -70,7 +70,7 @@
 
   .designer,
   .programmer {
-    padding: 5em 0;
+    /* padding: 5em 0; */
     background: 0;
   }
 
@@ -80,6 +80,7 @@
     align-items: flex-end;
     padding-right: 15vw;
     padding-left: 5vw;
+    padding-top: 4em;
     color: #fff;
   }
 
@@ -89,6 +90,7 @@
     align-items: flex-start;
     padding-left: 15vw;
     padding-right: 5vw;
+    padding-bottom: 2rem;
     color: #000;
   }
 
